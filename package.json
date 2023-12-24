@@ -9,9 +9,13 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "write-translations": "docusaurus write-translations",
+    "crowdin": "crowdin",
+    "crowdin:sync": "docusaurus write-translations && crowdin upload && crowdin download"
   },
   "dependencies": {
+     @crowdin/cli": "^3.2.2",
     "@algolia/client-search": "^4.20.0",
     "@docusaurus/core": "3.0.1",
     "@docusaurus/plugin-content-docs": "3.0.1",

@@ -37,6 +37,11 @@ const config = {
 					label: "Downloads",
 					to: "downloads",
 				},
+        {
+          type: "localeDropdown",
+          position: "right",
+          className: "header-language-link"
+        },
 				{
 					label: "About",
 					position: "right",
@@ -120,6 +125,7 @@ const config = {
 					editUrl: "https://github.com/meshtastic/meshtastic/edit/master/",
 					breadcrumbs: false,
 					showLastUpdateAuthor: true,
+          editLocalizedFiles: true,
 				},
 				theme: {
 					customCss: require.resolve("./src/css/custom.css"),
@@ -130,6 +136,10 @@ const config = {
 	customFields: {
 		API_URL: process.env.API_URL,
 	},
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "de", "pt-br", "is"],
+  },
 	markdown: {
 		mermaid: true,
 	},
